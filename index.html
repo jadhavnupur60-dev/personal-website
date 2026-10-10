@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website and portfolio featuring projects, blog, and contact options.">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <meta name="theme-color" content="#4f46e5">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section with Profile Picture -->
+       <!-- Home Section with Profile Picture -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <img src="assets/images/profile.jpg" alt="Profile Picture" class="profile-img">
+        <h1>Hi, I'm a Web Developer</h1>
+        <p>Building responsive, accessible, and high-performance web experiences.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </div>
+</section>
+
+        <!-- Projects Gallery Section -->
+        <section id="projects" class="projects-section">
+            <h2>Projects</h2>
+            <div id="projects-grid" class="grid">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </section>
+
+        <!-- Blog Stub Section -->
+        <section id="blog" class="blog-section">
+            <h2>Latest Blog Posts</h2>
+            <article class="blog-stub">
+                <h3>Getting Started with Modern Web Design</h3>
+                <p>A short overview of building accessible websites using semantic HTML and modular CSS...</p>
+                <a href="#">Read More</a>
+            </article>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="contact-section">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <p id="form-status"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Personal Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
